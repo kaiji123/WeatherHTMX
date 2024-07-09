@@ -1,0 +1,15 @@
+{% if weather_info %}
+<div class="weather-data">
+    <h2>Weather in {{ weather_info.city }} ({{ weather_info.country }})</h2>
+    <p>Temperature: {{ weather_info.temp }} °C</p>
+    <p>Condition: {{ weather_info.description }}</p>
+    <p>Humidity: {{ weather_info.humidity }}%</p>
+    <p>Wind Speed: {{ weather_info.wind_speed }} m/s</p>
+</div>
+
+<div id="forecast-data" style="display: none;">
+    {% for entry in weather_info.forecast %}
+        <div class="forecast-entry" data-datetime="{{ entry.datetime }}" data-temp="{{ entry.temp }}" data-humidity="{{ entry.humidity }}"></div>
+    {% endfor %}
+</div>
+{% endif %}

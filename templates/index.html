@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Demo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="/static/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header" >
+        <h1>HTMX Feature Showcase</h1>
+        <nav>
+            <button hx-get="/welcome" hx-target="#main-content" hx-swap="innerHTML">Welcome</button>
+
+            <button hx-get="/form" hx-target="#main-content" hx-swap="innerHTML">Tell us your name</button>
+            <button hx-get="/weather" hx-target="#main-content" hx-swap="innerHTML">Weather</button>
+        </nav>
+    </header>
+    <main id="main-content">
+        WeatherHTMX
+    </main>
+    <footer class="footer">
+        <p>HTMX Demo © 2024</p>
+    </footer>
+</body>
+</html>

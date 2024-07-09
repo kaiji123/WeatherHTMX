@@ -1,0 +1,9 @@
+<div>
+    <h2>Your Name</h2>
+    <form hx-post="/submit-form" hx-target="#result" hx-swap="innerHTML">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+</div>

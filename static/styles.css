@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Define keyframes for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Define keyframes for the slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to weather result */
+.weather-result {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply slide-in animation to weather form */
+.weather-form {
+    animation: slideIn 1s ease-in-out;
+}
+
+/* Enhance input fields with transitions */
+input[type="text"] {
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Style the submit button with a hover effect */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Style the weather data */
+.weather-data {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.weather-data:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
